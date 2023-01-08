@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-int)2p#di+cab-b@x6kwx21kp#3ba48w7t1-p4gs2==!urun2z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.90.221"]
 
 
 # Application definition
@@ -51,14 +51,19 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Request Logger
     "basic_django.middleware.request_log.RequestLogMiddleware",
+    # "basic_django.middleware.auth.AuthMiddleware",
 ]
+
+# REST_FRAMEWORK = {
+#     'EXCEPTION_HANDLER': 'basic_django.exceptionHandler.custom_exception_handler'
+# }
 
 ROOT_URLCONF = 'basic_django.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['template.exceptionHandler.custom_exception_handler'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

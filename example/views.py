@@ -10,7 +10,7 @@ from .serializers import ExampleSerializer
 
 
 class ExampleView(APIView):
-    def get(self,_request):
+    def get(self, _request):
         print('*****************hi')
         # examples = Example.objects.all()
         # print(f'***************hi {examples}')
